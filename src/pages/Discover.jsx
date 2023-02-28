@@ -7,7 +7,8 @@ import { useState } from "react";
 import { useGetTopChartsQuery } from "../redux/services/shazamCore";
 
 const Discover = () => {
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
+    console.log(dispatch);
     const { activeSong, isPlaying } = useSelector((state)=> state.player)
     const {data, isFetching, error} = useGetTopChartsQuery();
     const { genreTitle } = "Pop"
